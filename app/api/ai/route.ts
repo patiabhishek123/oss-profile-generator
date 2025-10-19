@@ -1,22 +1,25 @@
-import OpenAI from "openai";
 import { NextResponse } from "next/server";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY as string);
 
 export async function POST(req: Request) {
   const { githubData } = await req.json();
 
-  const prompt = `
-  Write a short, inspiring open-source contributor bio based on this data:
-  ${JSON.stringify(githubData, null, 2)}
-  Keep it under 100 words.
-  `;
+  try {
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-  const completion = await client.chat.completions.create({
-    model: "gpt-4o-mini",
-    messages: [{ role: "user", content: prompt }],
-  });
+    const prompt = `
+    Write a short, inspiring open-source contributor bio based on this data:
+    ${JSON.stringify(githubData, null, 2)}
+    Keep it under 100 words, in a friendly professional tone.
+    `;
 
-  const bio = completion.choices[0].message.content;
-  return NextResponse.json({ bio });
+    const result = await model.generateContent(prompt);
+    const bio = result.response.text();
+
+    return NextResponse.json({ bio });
+  } catch (error) {
+    return NextResponse.json({ error: "Gemini API request failed." }, { status: 500 });
+  }
 }

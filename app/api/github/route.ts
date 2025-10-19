@@ -18,6 +18,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({
       name: user.data.name,
+      avatar: user.data.avatar_url,
       followers: user.data.followers,
       repoSummary,
     });
