@@ -1,4 +1,4 @@
-#Rereadme
+# Rereadme
 # 🧑‍💻 Open Source Contributor Profile Generator
 
 > 🚀 Built for **@Hacking this Weekend - Open Source Hackfest! (MLH)**  
