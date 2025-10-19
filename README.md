@@ -1,47 +1,56 @@
 # 🧑‍💻 Open Source Contributor Profile Generator
 
-> ⚡ Instantly generate a personalized **Open Source Bio** using your GitHub activity + AI magic!  
-> Built for MLH Hackathons 💫
+> 🚀 Built for **@Hacking this Weekend - Open Source Hackfest! (MLH)**  
+> by [Your Name or GitHub Handle]  
+> ✨ Empowering open-source contributors with AI-generated bios!
 
 ---
 
-## 🚀 Overview
+## 🧩 Overview
 
-The **Open Source Contributor Profile Generator** helps developers quickly create an inspiring open-source contributor bio based on their **GitHub activity**.
+**Open Source Contributor Profile Generator** is a mini web app that turns your **GitHub profile and repos** into a short, inspiring **AI-written bio** for use in your MLH profile, LinkedIn, or portfolio.
 
-You simply enter your **GitHub username**, and the app:
-1. Fetches your latest repositories, stars, and languages via the **GitHub API**
-2. Summarizes your contributions using an **AI model (OpenAI GPT-4o-mini)**
-3. Generates a short, creative, and professional **Open Source Bio**
+Just enter your GitHub username → the app fetches your public data → and uses **GPT-4o-mini** to craft a polished bio highlighting your open-source impact.
 
 ---
 
-## ✨ Demo
+## 🎯 Inspiration
 
-🔗 **Live App:** [https://your-vercel-deployment-url.vercel.app](https://your-vercel-deployment-url.vercel.app)  
-🧠 Example Input: `torvalds`  
-💬 Example Output:
+In open source, every contribution matters — but many developers struggle to describe their impact in words.  
+This project bridges that gap by using **AI to summarize your public contributions** into a clear, professional bio.
 
-> “A visionary open-source engineer passionate about building systems that empower developers globally.”
+Perfect for:
+- MLH hackathon participants 🧠  
+- Open source newcomers 🌱  
+- Developers updating their profiles 💼  
 
 ---
 
-## 🧩 Tech Stack
+## ⚙️ Features
+
+✅ Fetch public GitHub user & repo data  
+✅ Generate an AI-written open source contributor bio  
+✅ Copy the generated bio to your clipboard  
+✅ Minimalist and mobile-friendly UI  
+✅ One-click deploy on Vercel
+
+---
+
+## 🧠 Tech Stack
 
 | Layer | Technology |
 |-------|-------------|
-| 🖥️ Frontend | Next.js (TypeScript) |
-| ⚙️ Backend | Next.js API Routes |
-| 🧠 AI | OpenAI GPT-4o-mini |
-| 🧑‍💻 Data Source | GitHub REST API |
-| ☁️ Hosting | Vercel |
+| Frontend | Next.js (TypeScript) |
+| Backend | Next.js API Routes |
+| APIs | GitHub REST API + OpenAI API (GPT-4o-mini) |
+| Styling | Tailwind CSS |
+| Hosting | Vercel |
 
 ---
 
-## ⚙️ Setup Instructions
+## 🚀 Quick Start
 
-### 1️⃣ Clone the Repo
+### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/yourusername/oss-profile-gen.git
+git clone https://github.com/your-username/oss-profile-gen.git
 cd oss-profile-gen
-npm install
