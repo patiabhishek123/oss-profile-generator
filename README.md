@@ -2,7 +2,7 @@
 # 🧑‍💻 Open Source Contributor Profile Generator
 
 > 🚀 Built for **@Hacking this Weekend - Open Source Hackfest! (MLH)**  
-> by [Your Name or GitHub Handle]  
+> by [patiabhishek123]  
 > ✨ Empowering open-source contributors with AI-generated bios!
 
 ---
